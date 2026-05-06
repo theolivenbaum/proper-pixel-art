@@ -1,0 +1,68 @@
+[project]
+name = "proper-pixel-art"
+version = "1.4.3"
+description = "Converts pixel-art-style images such as those from generative models or low-quality sprite web uploads to true resolution usable assets."
+authors = [{name = "Kenneth Allen"}]
+readme = "README.md"
+requires-python = ">=3.12"
+license = "MIT"
+keywords = [
+    "pixel-art",
+    "image-processing",
+    "sprites",
+    "game-dev",
+    "generative-ai",
+    "generative-art",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Topic :: Multimedia :: Graphics :: Graphics Conversion",
+    "Topic :: Games/Entertainment",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+]
+dependencies = [
+    "numpy>=2.2.4",
+    "opencv-python-headless>=4.11.0.86",
+    "pillow>=11.1.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/KennethJAllen/proper-pixel-art"
+Repository = "https://github.com/KennethJAllen/proper-pixel-art"
+Issues = "https://github.com/KennethJAllen/proper-pixel-art/issues"
+
+[project.optional-dependencies]
+web = ["gradio>=5.0.0"]
+scripts = [
+    "openai>=1.54.0",
+    "python-dotenv>=1.0.0",
+]
+
+[project.scripts]
+ppa = "proper_pixel_art.cli:main"
+ppa-web = "proper_pixel_art.web:main"
+ppa-gen = "scripts.ppa_gen:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6.29.5",
+    "pytest>=8.4.2",
+    "ruff>=0.14.4",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["proper_pixel_art"]
+exclude = ["assets"]
+
+[tool.hatch.build.targets.sdist]
+exclude = ["assets"]
+
+[tool.ruff]
+lint.select = ["I"]
