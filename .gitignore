@@ -1,6 +1,57 @@
-.venv/
-output/
-tests/outputs/
-notebooks/
-*__pycache__*
+## .NET / Visual Studio
+
+# Build outputs
+bin/
+obj/
+out/
+
+# NuGet
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.vcxproj.filters
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+# Test results
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+coverage.cobertura.xml
+coverage-report/
+
+# Publish outputs
+publish/
+*.pubxml
+*.pubxml.user
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Env / secrets
 .env
+*.env.local
+
+# Generated
+*.generated.cs
+
+# Python legacy (kept in .reference)
+.venv/
+*__pycache__*
+*.pyc

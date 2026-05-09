@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/ProperPixelArt.Cli/ProperPixelArt.Cli.csproj" />
+    <Project Path="src/ProperPixelArt/ProperPixelArt.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/ProperPixelArt.Tests/ProperPixelArt.Tests.csproj" />
+  </Folder>
+</Solution>
